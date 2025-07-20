@@ -35,6 +35,25 @@ A modern Electron application for collecting rent from Solana wallets efficientl
    # The executable will be in the `release` folder
    ```
 
+### macOS Build
+
+For building on macOS, see [MACOS-BUILD.md](./MACOS-BUILD.md) for detailed instructions.
+
+**Quick macOS Setup:**
+```bash
+# Run setup script
+chmod +x setup-mac.sh
+./setup-mac.sh
+
+# Build for macOS
+npm run dist:mac
+```
+
+**Build Outputs:**
+- `Rent-Collector.app` - macOS application bundle
+- `Rent-Collector-1.0.1.dmg` - Universal installer (Intel + Apple Silicon)
+- `Rent-Collector-1.0.1-arm64.dmg` - Apple Silicon only installer
+
 ## Usage
 
 ### Step 1: Setup
