@@ -89,13 +89,15 @@ npm run dist:mac
 
 ## File Format
 
-Your wallet file should be a plain text file with one private key per line:
+Your wallet file should be a .txt file with one private key per line. (You can import multiple .txt files)
+It can be a mix of private keys and public keys in the .txt file, the importing thing is that they are on separated lines.
 
 ```
 4NwwCq5bBmDwkvBkujMV19khLcYwCzLciqB3gJt7jJkX...
 5PqR8vN2mK9wL3xJ7hF4tY6uI1oP9sA2dG8fH3jK6l...
 ...
 ```
+
 
 ## Configuration
 
