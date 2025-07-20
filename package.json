@@ -1,0 +1,79 @@
+{
+  "name": "rent-collector-ui",
+  "version": "1.0.1",
+  "description": "Solana Rent Collector with UI",
+  "main": "dist-electron/main.js",
+  "homepage": "./",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "electron": "wait-on tcp:5173 && cross-env IS_DEV=true electron .",
+    "electron-builder": "npm run build && electron-builder",
+    "dist": "npm run build && electron-builder --publish=never",
+    "dist:mac": "npm run build && electron-builder --mac --publish=never",
+    "dist:dir": "npm run build && electron-builder --dir",
+    "postinstall": "electron-builder install-app-deps",
+    "dev:electron": "concurrently \"npm run dev\" \"wait-on tcp:5173 && cross-env IS_DEV=true electron .\"",
+    "setup:mac": "chmod +x setup-mac.sh && ./setup-mac.sh"
+  },
+  "dependencies": {
+    "@solana/spl-token": "^0.3.9",
+    "@solana/web3.js": "^1.87.6",
+    "bs58": "^5.0.0",
+    "lucide-react": "^0.294.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "ws": "^8.18.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.4",
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "@types/ws": "^8.18.1",
+    "@vitejs/plugin-react": "^4.2.1",
+    "concurrently": "^8.2.2",
+    "cross-env": "^7.0.3",
+    "electron": "^27.1.3",
+    "electron-builder": "^24.6.4",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.8",
+    "vite-plugin-electron": "^0.15.5",
+    "vite-plugin-electron-renderer": "^0.14.5",
+    "wait-on": "^7.2.0"
+  },
+  "build": {
+    "appId": "com.rentcollector.app",
+    "productName": "Rent-Collector",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "dist-electron/**/*"
+    ],
+    "icon": "public/icon.ico",
+    "mac": {
+      "category": "public.app-category.finance",
+      "icon": "public/icon.icns",
+      "target": [
+        {
+          "target": "dmg",
+          "arch": ["x64", "arm64"]
+        },
+        {
+          "target": "zip",
+          "arch": ["x64", "arm64"]
+        }
+      ]
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "public/icon.ico"
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "public/icon.png"
+    }
+  }
+}
