@@ -13,6 +13,21 @@ A modern Electron application for collecting rent from Solana wallets efficientl
 
 ## Installation
 
+### Download Pre-built Binaries
+
+**Latest Release**: [v1.0.1](https://github.com/ReactOnAuth/Solana-Rent-Collector/releases/latest)
+
+#### Windows
+- **Setup**: [Rent-Collector-Setup-1.0.1.exe](https://github.com/ReactOnAuth/Solana-Rent-Collector/releases/download/v1.0.1/Rent-Collector.Setup.1.0.1.exe)
+- **Portable**: [Rent-Collector-1.0.1-win.zip](https://github.com/ReactOnAuth/Solana-Rent-Collector/releases/download/v1.0.1/Rent-Collector.Setup.1.0.1.zip)
+
+#### macOS
+- **Universal (Intel + Apple Silicon)**: [Rent-Collector-1.0.1.dmg](https://github.com/ReactOnAuth/Solana-Rent-Collector/releases/download/v1.0.1/Rent-Collector-1.0.1.dmg)
+- **Apple Silicon Only**: [Rent-Collector-1.0.1-arm64.dmg](https://github.com/ReactOnAuth/Solana-Rent-Collector/releases/download/v1.0.1/Rent-Collector-1.0.1-arm64.dmg)
+- **Universal ZIP**: [Rent-Collector-1.0.1-mac.zip](https://github.com/ReactOnAuth/Solana-Rent-Collector/releases/download/v1.0.1/Rent-Collector-1.0.1-mac.zip)
+
+### Build from Source
+
 1. **Install Dependencies**
    ```bash
    npm install
@@ -85,8 +100,6 @@ Your wallet file should be a plain text file with one private key per line:
 ## Configuration
 
 ### RPC Endpoints
-- **Mainnet**: `https://api.mainnet-beta.solana.com`
-- **Devnet**: `https://api.devnet.solana.com`
 - **Helius**: `https://rpc.helius.xyz/?api-key=YOUR_API_KEY`
 
 ### Fee Payer
